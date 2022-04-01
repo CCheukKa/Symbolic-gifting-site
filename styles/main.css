@@ -18,9 +18,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     font-family: 'Nunito', sans-serif;
     font-size: 12vw;
     color: white;
     text-shadow: var(--palette2) 10px 5px 0px, var(--palette1) -5px -5px 0px;
     font-weight: 1000;
+}
+
+video {
+    outline: 2px solid black;
+    width: 60%;
 }
