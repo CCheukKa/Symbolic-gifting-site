@@ -28,11 +28,11 @@ const contentTypeMap = {
 })()
 
 const server = http.createServer((request, response) => {
-    timestampLog(`${request.socket.remoteAddress} sent request`);
+    timestampLog(`${request.socket.remoteAddress} requested ${request.url}`);
 
-    request.on('data', chunk => {
-        timestampLog(`${request.socket.remoteAddress} posted ${JSON.parse(chunk.toString())}`);
-    });
+    // request.on('data', chunk => {
+    //     timestampLog(`${request.socket.remoteAddress} posted ${JSON.parse(chunk.toString())}`);
+    // });
 
     response.setHeader('Access-Control-Allow_Origin', '*');
 
